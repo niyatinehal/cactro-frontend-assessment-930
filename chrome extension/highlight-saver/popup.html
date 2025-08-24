@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Highlights</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Highlights</h1>
+      <div class="actions">
+        <a href="options.html" target="_blank" title="Settings">⚙️</a>
+      </div>
+    </header>
+
+    <div id="empty" class="empty">No highlights yet. Select text on any page → Save.</div>
+    <ul id="list" class="list" role="list"></ul>
+
+    <template id="item-tpl">
+      <li class="item">
+        <div class="meta">
+          <a class="title" target="_blank" rel="noreferrer"></a>
+          <time class="time"></time>
+          <button class="delete" title="Delete">🗑️</button>
+        </div>
+        <blockquote class="text"></blockquote>
+        <details class="ctx">
+          <summary>Context</summary>
+          <div class="ctx-body"></div>
+        </details>
+        <div class="row">
+          <button class="copy">Copy</button>
+          <button class="summarize">Summarize (AI)</button>
+        </div>
+        <div class="summary"></div>
+      </li>
+    </template>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

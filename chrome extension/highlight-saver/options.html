@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Highlight Saver – Settings</title>
+    <style>
+      body { max-width: 720px; margin: 24px auto; padding: 0 16px; font: 15px/1.5 system-ui, Arial, sans-serif; }
+      label { display: block; margin: 12px 0 4px; font-weight: 600; }
+      input, select, button, textarea { width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #ccc; }
+      .row { display: grid; grid-template-columns: 1fr 160px; gap: 10px; align-items: end; }
+      .hint { color: #444; font-size: 13px; }
+      .ok { color: #0a7d14; }
+    </style>
+  </head>
+  <body>
+    <h1>Highlight Saver – Settings</h1>
+    <p class="hint">Your OpenAI API key is stored locally using <code>chrome.storage.local</code> and never leaves your device except when making requests directly to OpenAI from your browser.</p>
+
+    <label for="apiKey">OpenAI API Key</label>
+    <div class="row">
+      <input id="apiKey" type="password" placeholder="sk-..." />
+      <button id="save">Save</button>
+    </div>
+
+    <label for="model">Model</label>
+    <select id="model">
+      <option value="gpt-4o-mini">gpt-4o-mini</option>
+      <option value="gpt-4o">gpt-4o</option>
+      <option value="gpt-4.1-mini">gpt-4.1-mini</option>
+      <option value="gpt-3.5-turbo">gpt-3.5-turbo (legacy)</option>
+    </select>
+
+    <p id="status"></p>
+
+    <script src="options.js"></script>
+  </body>
+</html>
